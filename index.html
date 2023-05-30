@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Array Methods Demo</title>
+  </head>
+  <body>
+    <h1>Array Methods Demo</h1>
+
+    <script>
+      // Example array
+      var fruits = ["apple", "banana", "mango", "orange"];
+
+      // Display the original array
+      document.write("<h3>Original Array:</h3>");
+      document.write(fruits);
+
+      // Array methods
+      document.write("<h3>Array Methods:</h3>");
+
+      // 1. map()
+      document.write("<h4>map()</h4>");
+      var mappedArray = fruits.map(function (fruit) {
+        return fruit.toUpperCase();
+      });
+      document.write("<p>" + mappedArray + "</p>");
+
+      // 2. filter()
+      document.write("<h4>filter()</h4>");
+      var filteredArray = fruits.filter(function (fruit) {
+        return fruit.length > 5;
+      });
+      document.write("<p>" + filteredArray + "</p>");
+
+      // 3. sort()
+      document.write("<h4>sort()</h4>");
+      fruits.sort();
+      document.write("<p>" + fruits + "</p>");
+
+      // 4. forEach()
+      document.write("<h4>forEach()</h4>");
+      fruits.forEach(function (fruit) {
+        document.write("<p>" + fruit + "</p>");
+      });
+
+      // 5. concat()
+      document.write("<h4>concat()</h4>");
+      var moreFruits = ["grape", "kiwi"];
+      var combinedArray = fruits.concat(moreFruits);
+      document.write("<p>" + combinedArray + "</p>");
+
+      // 6. every()
+      document.write("<h4>every()</h4>");
+      var isEveryFruitLongerThanThree = fruits.every(function (fruit) {
+        return fruit.length > 3;
+      });
+      document.write("<p>" + isEveryFruitLongerThanThree + "</p>");
+
+      // 7. some()
+      document.write("<h4>some()</h4>");
+      var isSomeFruitLongerThanFive = fruits.some(function (fruit) {
+        return fruit.length > 5;
+      });
+      document.write("<p>" + isSomeFruitLongerThanFive + "</p>");
+
+      // 8. includes()
+      document.write("<h4>includes()</h4>");
+      var includesCherry = fruits.includes("cherry");
+      document.write("<p>" + includesCherry + "</p>");
+
+      // 9. join()
+      document.write("<h4>join()</h4>");
+      var joinedString = fruits.join(", ");
+      document.write("<p>" + joinedString + "</p>");
+
+      // 10. reduce()
+      document.write("<h4>reduce()</h4>");
+      var reducedValue = fruits.reduce(function (accumulator, fruit) {
+        return accumulator + "-" + fruit;
+      });
+      document.write("<p>" + reducedValue + "</p>");
+
+      // 11. find()
+      document.write("<h4>find()</h4>");
+      var foundFruit = fruits.find(function (fruit) {
+        return fruit.charAt(0) === "b";
+      });
+      document.write("<p>" + foundFruit + "</p>");
+
+      // 12. findIndex()
+      document.write("<h4>findIndex()</h4>");
+      var foundIndex = fruits.findIndex(function (fruit) {
+        return fruit === "cherry";
+      });
+      document.write("<p>" + foundIndex + "</p>");
+
+      // 13. indexOf()
+      document.write("<h4>indexOf()</h4>");
+      var indexOfCherry = fruits.indexOf("cherry");
+      document.write("<p>" + indexOfCherry + "</p>");
+
+      // 14. fill()
+      document.write("<h4>fill()</h4>");
+      var filledArray = fruits.fill("grapefruit", 1, 3);
+      document.write("<p>" + filledArray + "</p>");
+
+      // 15. slice()
+      document.write("<h4>slice()</h4>");
+      var slicedArray = fruits.slice(1, 3);
+      document.write("<p>" + slicedArray + "</p>");
+
+      // 16. reverse()
+      document.write("<h4>reverse()</h4>");
+      fruits.reverse();
+      document.write("<p>" + fruits + "</p>");
+
+      // 17. push()
+      document.write("<h4>push()</h4>");
+      var newLength = fruits.push("elderberry");
+      document.write("<p>" + fruits + "</p>");
+      document.write("<p>New length: " + newLength + "</p>");
+
+      // 18. pop()
+      document.write("<h4>pop()</h4>");
+      var poppedElement = fruits.pop();
+      document.write("<p>" + fruits + "</p>");
+      document.write("<p>Popped element: " + poppedElement + "</p>");
+
+      // 19. shift()
+      document.write("<h4>shift()</h4>");
+      var shiftedElement = fruits.shift();
+      document.write("<p>" + fruits + "</p>");
+      document.write("<p>Shifted element: " + shiftedElement + "</p>");
+
+      // 20. unshift()
+      document.write("<h4>unshift()</h4>");
+      var newLength = fruits.unshift("apricot", "avocado");
+      document.write("<p>" + fruits + "</p>");
+      document.write("<p>New length: " + newLength + "</p>");
+    </script>
+  </body>
+</html>
